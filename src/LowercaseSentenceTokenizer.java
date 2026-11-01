@@ -35,7 +35,8 @@ public class LowercaseSentenceTokenizer implements Tokenizer {
     ArrayList TokenList = new ArrayList<>();
     while(scanner.hasNext())
       {
-        scanner.next();
+        String word = scanner.next();
+        TokenList.add(word);
       }
     return null;
   }
