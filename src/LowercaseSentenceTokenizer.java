@@ -41,8 +41,11 @@ public class LowercaseSentenceTokenizer implements Tokenizer {
             int index = word.length();
             for(int i = 0; i < index; i++)
               {
-                
-                if()
+                char character = word.charAt(i);
+                if(character == '.' || character == ',' || character == '?' || character == '!' )
+                  {
+                    TokenList.add(character);
+                  }
               }
           }
         TokenList.add(word);
