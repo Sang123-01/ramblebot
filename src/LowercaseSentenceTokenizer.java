@@ -44,11 +44,17 @@ public class LowercaseSentenceTokenizer implements Tokenizer {
                 char character = word.charAt(i);
                 if(character == '.' || character == ',' || character == '?' || character == '!' )
                   {
-                    TokenList.add(character);
+                    String symbol = String.valueOf(".");
+                    String newText = word;
+                    newText = newText.substring(0, index - 1);
+                    TokenList.add(newText);
+                    TokenList.add(symbol);
                   }
               }
-          }
-        TokenList.add(word);
+          }else
+            {
+              TokenList.add(word);
+            }
       }
       return TokenList;
   }
