@@ -25,7 +25,7 @@ class LowercaseSentenceTokenizerTest {
         LowercaseSentenceTokenizer SpaceCase = new LowercaseSentenceTokenizer();
         Scanner scanner = new Scanner("hello     hi hi hi    hello hello");
         List<String> TokenSpace = SpaceCase.tokenize(scanner);
-        assertEquals(scanner, TokenSpace);
+        assertEquals(List.of("hello","hi" ,"hi" ,"hi" ,"hello" , "hello"), TokenSpace);
     }
     
 
