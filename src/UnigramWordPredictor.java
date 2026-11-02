@@ -20,6 +20,7 @@ public class UnigramWordPredictor implements WordPredictor {
    */
   public UnigramWordPredictor(Tokenizer tokenizer) {
     this.tokenizer = tokenizer;
+
   }
 
   /**
@@ -50,7 +51,12 @@ public class UnigramWordPredictor implements WordPredictor {
    */
   public void train(Scanner scanner) {
     List<String> trainingWords = tokenizer.tokenize(scanner);
-
+    neighborMap = new HashMap();
+    for(int i = 0; i<trainingWords.size();i++)
+      {
+        String FirstW = trainingWords.get(i);
+        String SecondW = trainingWords.get(i+1);
+      }
     // TODO: Convert the trainingWords into neighborMap here
   }
 
